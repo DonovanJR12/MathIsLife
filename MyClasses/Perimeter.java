@@ -36,14 +36,14 @@ public class Perimeter {
                 case 1: 
                     System.out.print("What is the side measurement: ");
                     sideLength = perimeterSelection.nextDouble();
-                    perimeterSquare(sideLength);
+                    System.out.print(perimeterSquare(sideLength));
                     break;
                 case 2: 
                     System.out.print("What is the base measurement: ");
                     base = perimeterSelection.nextDouble();
                     System.out.print("What is the hieght measurement: ");
                     hieght = perimeterSelection.nextDouble();
-                    perimeterRectangle(base, hieght);
+                    System.out.print(perimeterRectangle(base, hieght));
                     break;
                 case 3:                     
                     System.out.print("What is the measurement of side 1: ");
@@ -52,12 +52,12 @@ public class Perimeter {
                     side2 = perimeterSelection.nextDouble();
                     System.out.print("What is the measurement of side 3: ");
                     side3 = perimeterSelection.nextDouble();
-                    perimeterTriangle(side1, side2, side3);
+                    System.out.print(perimeterTriangle(side1, side2, side3));
                     break;
                 case 4: 
                     System.out.print("What is the radius measurement: ");
                     radius = perimeterSelection.nextDouble();
-                    perimeterCircle(radius);
+                    System.out.print(perimeterCircle(radius));
                     break;
                 case 5: 
                     System.out.println("Back to Main Menu\n");
@@ -72,31 +72,43 @@ public class Perimeter {
     }
 //PERIMETER =========================================
     //Compute Perimeter for Square
-    public static void perimeterSquare(double sideLength){
+    /*public static void perimeterSquare(double sideLength){
         System.out.println("\nPerimeter for Square");
         System.out.println("P = 4s");
         System.out.println("P = " + "4*"+sideLength);
         System.out.println("P = " + 4.0*sideLength);
+    }*/
+    public static double perimeterSquare(double sideLength){
+        return (4.0*sideLength);
     }
     //Coupute Perimeter for Rectangle
-    public static void perimeterRectangle(double base, double hieght){
+    /*public static void perimeterRectangle(double base, double hieght){
         System.out.println("\nPerimeter for Rectangle");
         System.out.println("P = 2b+2h");
         System.out.println("P = 2*" + base+" + 2*"+hieght);
         System.out.println("P = " + (2.0*base+2.0*hieght));
+    }*/
+    public static double perimeterRectangle(double base, double hieght){
+        return (2.0*base+2.0*hieght);
     }
     //Compute Perimeter for Triangle
-    public static void perimeterTriangle(double side1, double side2, double side3){
+    /*public static void perimeterTriangle(double side1, double side2, double side3){
         System.out.println("\nPerimeter for Triangle");
         System.out.println("P = s1+s2+s3");
         System.out.println("P = " + side1 +" + "+ side2 +" + "+side3);
         System.out.println("P = " + (side1+side2+side3));
+    }*/
+    public static double perimeterTriangle(double side1, double side2, double side3){
+        return (side1+side2+side3);
     }
     //Coupute Perimeter for Circle
-    public static void perimeterCircle(double radius){
+    /*public static void perimeterCircle(double radius){
         System.out.println("\nPerimeter for Circle");
         System.out.println("C = 2\u03C0r");
         System.out.println("C = 2\u03C0*"+radius);
         System.out.println("C = " + 2.0*PI*radius);
+    }*/
+    public static double perimeterCircle(double radius){
+        return (2.0*PI*radius);
     }
 }

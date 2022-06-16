@@ -1,3 +1,6 @@
+//Compile javac Math.java
+//Run java Math
+
 //Imports
 import static java.lang.System.exit;
 import java.util.Scanner;

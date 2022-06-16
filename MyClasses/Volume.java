@@ -45,7 +45,7 @@ public class Volume {
                     width = volumeSelection.nextDouble();
                     System.out.print("What is the hieght measurement: ");
                     hieght = volumeSelection.nextDouble();
-                    VolumeRectangularPrism(length, width, hieght);
+                    System.out.print(VolumeRectangularPrism(length, width, hieght));
                     break;
                 case 2: 
                     System.out.print("What is the base measurement: ");
@@ -54,14 +54,14 @@ public class Volume {
                     hieght = volumeSelection.nextDouble();
                     System.out.print("What is the width measurement: ");
                     width = volumeSelection.nextDouble();
-                    VolumeRightPrism(base, width, hieght);
+                    System.out.print(VolumeRightPrism(base, width, hieght));
                     break;
                 case 3:                     
                     System.out.print("What is the radius measurement: ");
                     radius = volumeSelection.nextDouble();
                     System.out.print("What is the hieght measurement: ");
                     hieght = volumeSelection.nextDouble();
-                    VolumeCylinder(radius, hieght);
+                    System.out.print(VolumeCylinder(radius, hieght));
                     break;
                 case 4: 
                     System.out.print("What is the length measurement: ");
@@ -70,19 +70,19 @@ public class Volume {
                     width = volumeSelection.nextDouble();
                     System.out.print("What is the base measurement: ");
                     base = volumeSelection.nextDouble();
-                    VolumePyramid(base, width, sideLength);
+                    System.out.print(VolumePyramid(base, width, sideLength));
                     break;
                 case 5:                      
                     System.out.print("What is the length measurement: ");
                     length = volumeSelection.nextDouble();
                     System.out.print("What is the radius measurement: ");
                     radius = volumeSelection.nextDouble();
-                    VolumeCone(radius);
+                    System.out.print(VolumeCone(radius));
                     break;
                 case 6:  
                     System.out.print("What is the radius measurement: ");
                     radius = volumeSelection.nextDouble();
-                    VolumeSphere(radius);
+                    System.out.print(VolumeSphere(radius));
                     break;
                 case 7: 
                     System.out.println("Back to Main Menu\n");
@@ -100,48 +100,66 @@ public class Volume {
     
     //VOLUME =============================
     //Compute Volume Rectangular Prism
-    public static void VolumeRectangularPrism(double length, double width, double hieght){
+    /*public static void VolumeRectangularPrism(double length, double width, double hieght){
         System.out.println("\nVolume Rectangular Prism");
         System.out.println("Volume = lwh");
         System.out.println("Volume = "+length+"*"+width+"*"+hieght);
         System.out.println("Volume = "+length*width*hieght);
+    }*/
+    public static double VolumeRectangularPrism(double length, double width, double hieght){
+        return (length*width*hieght);
     }
     //Compute Volume Right Prism
-    public static void VolumeRightPrism(double base, double width, double hieght){
+    /*public static void VolumeRightPrism(double base, double width, double hieght){
         System.out.println("\nVolume Right Prism");
         System.out.println("Volume = Bh");
         System.out.println("B = Area of base = bw");
         System.out.println("Volume = " + base*width +"*"+width);
         System.out.println("Volume = " + base*width*width);
+    }*/
+    public static double VolumeRightPrism(double base, double width, double hieght){
+        return (base*width*width);
     }
     //Compute Volume Cylinder
-    public static void VolumeCylinder(double radius, double hieght){
+    /*public static void VolumeCylinder(double radius, double hieght){
         System.out.println("\nVolume Cylinder");
         System.out.println("Volume = \u03C0r\u00B2h");
         System.out.println("Volume = \u03C0"+radius+"\u00B2*"+ hieght);
         System.out.println("Volume = "+PI*radius*radius*hieght);
+    }*/
+    public static double VolumeCylinder(double radius, double hieght){
+        return (PI*radius*radius*hieght);
     }
     //Compute Volume Pyramid
-    public static void VolumePyramid(double base, double width, double hieght){
+    /*public static void VolumePyramid(double base, double width, double hieght){
         System.out.println("\nVolume Pyramid");
         System.out.println("Volume = (1/3)Bh");
         System.out.println("B = Area of base = bw");
         System.out.println("Volume = (1/3)*"+base*width+"*"+hieght);
         System.out.println("Volume = "+(1.0/3.0)*base*width*hieght);
+    }*/
+    public static double VolumePyramid(double base, double width, double hieght){
+        return ((1.0/3.0)*base*width*hieght);
     }
     //Compute Volume Cone
-    public static void VolumeCone(double radius){
+    /*public static void VolumeCone(double radius){
         System.out.println("\nVolume Cone");
         System.out.println("Volume = (1/3)\u03C0r\u00B2");
         System.out.println("Volume = (1/3)\u03C0*"+radius+"\u00B2");
         System.out.println("Volume = "+(1.0/3.0)*PI*radius*radius);
+    }*/
+    public static double VolumeCone(double radius){
+        return ((1.0/3.0)*PI*radius*radius);
     }
     //Compute Volume Sphere
-    public static void VolumeSphere(double radius){
+    /*public static void VolumeSphere(double radius){
         System.out.println("\nVolume Sphere");
         System.out.println("Volume = (4/3)\u03C0r\u00B3");
         System.out.println("Volume = (4/3)\u03C0*"+radius+"\u00B3");
         System.out.println("Volume = "+(4.0/3.0)*PI*radius*radius*radius);
+    }*/
+    public static double VolumeSphere(double radius){
+        return ((4.0/3.0)*PI*radius*radius*radius);
     }
 
 }
